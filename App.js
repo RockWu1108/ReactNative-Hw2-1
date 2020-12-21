@@ -47,9 +47,9 @@ export default function App() {
       <TextInput style = {textInputStyle.inputText} placeholder="輸入按鈕文字" onChangeText = {text===''?setText('輸入按鈕文字'):(text)=>{ setText(text)}}></TextInput>
       <TextInput style = {textInputStyle.inputText} placeholder="輸入按鈕顏色" onChangeText = {(color)=>{ setColor(color)}}></TextInput>
       
-      <MyButton myStyle = {buttonStyle.touchableOpacity} myColor={'#0080FF'} myTitle = {'確定'}   myOnPress={ () => {setting()}}/>
+      <MyButton myStyle = {buttonStyle.touchableOpacity} myColor='#0080FF' myTitle = {'確定'}   myOnPress={ () => {setting()}}/>
       {
-         state === 1 ? <MyButton myStyle = {[buttonStyle.touchableOpacity]} myColor={color}
+         state === 1 ? <MyButton myStyle = {[buttonStyle.touchableOpacity]} myColor={color} myOnPress={ () => {alterMessage("Success", color)}}
                         myTitle={text}/> : <Text></Text>
       }
     </View>

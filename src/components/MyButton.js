@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity , Text} from 'react-native';
-
+import PropTypes from 'prop-types';
 
 
 export const MyButton = (props) =>{
@@ -13,4 +13,8 @@ export const MyButton = (props) =>{
         </Text>
     </TouchableOpacity>
     )
+}
+
+MyButton.propTypes ={
+    myStyle : PropTypes.object.isrequired,
 }
